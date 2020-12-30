@@ -54,6 +54,8 @@
                         </select>
                     </div>
                     
+                     <h3>Assets</h3>
+                    
                      <div class="two fields">
                          <div class="field">
                             <label>Name</label>
@@ -62,9 +64,9 @@
                             <label>Description</label>
                          </div>
                        </div>
-                      {{#each values.colors}}
-                            <div class="two fields"><div class="field"><input type="text" name="colors" value="{{this}}"/></div><div class="field"><input type="text" name="colors" value="{{this}}"/></div></div>
-                      {{/each}}
+                       
+                       <div id="asset-list">
+                       </>
         
 
                      <button class="ui labeled icon button" onclick="handleAdd(event)">
@@ -95,7 +97,7 @@
 
     function handleAdd(ev) {
         ev.preventDefault();
-        $("#list").append("<div class='two fields'><div class='field'><input type='text' name='colors' value=''/></div><div class='field'><input type='text' name='colors'/></div></div>");
+        $("#asset-list").append("<div class='two fields'><div class='field'><input type='text' name='colors' value=''/></div><div class='field'><input type='text' name='colors'/></div></div>");
     }
 
     var source = document.getElementById("formTemplate").innerHTML;
