@@ -67,9 +67,29 @@
                        
                        <div id="asset-list">
                        </div>
+                       
+                        <button class="ui labeled icon button" onclick="handleAdd(event)">
+                        <i class="add icon"></i>
+                        Add Asset
+                     </button>
+                       
+                       
+                         <h3>Transforms</h3>
+                    
+                     <div class="two fields">
+                         <div class="field">
+                            <label>Name</label>
+                         </div>
+                          <div class="field">
+                            <label>Preset</label>
+                         </div>
+                       </div>
+                       
+                       <div id="transform-list">
+                       </div>
         
 
-                     <button class="ui labeled icon button" onclick="handleAdd(event)">
+                     <button class="ui labeled icon button" onclick="handleAdd2(event)">
                         <i class="add icon"></i>
                         Add Asset
                      </button>
@@ -98,6 +118,11 @@
     function handleAdd(ev) {
         ev.preventDefault();
         $("#asset-list").append("<div class='two fields'><div class='field'><input type='text' name='colors' value=''/></div><div class='field'><input type='text' name='colors'/></div></div>");
+    }
+    
+    function handleAdd2(ev) {
+        ev.preventDefault();
+        $("#asset-list").append("<div class='two fields'><div class='field'><input type='text' name='colors' value=''/></div><div class='field'> <select name='skills' class='ui fluid dropdown'><option value=''>AdaptiveStreaming</option></div></div>");
     }
 
     var source = document.getElementById("formTemplate").innerHTML;
