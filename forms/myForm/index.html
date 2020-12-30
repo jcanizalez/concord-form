@@ -91,7 +91,7 @@
 
                      <button class="ui labeled icon button" onclick="handleAdd2(event)">
                         <i class="add icon"></i>
-                        Add Asset
+                        Add Transform
                      </button>
               
 
@@ -122,7 +122,7 @@
     
     function handleAdd2(ev) {
         ev.preventDefault();
-        $("#asset-list").append("<div class='two fields'><div class='field'><input type='text' name='colors' value=''/></div><div class='field'> <select name='skills' class='ui fluid dropdown'><option value=''>AdaptiveStreaming</option></div></div>");
+        $("#transform-list").append("<div class='two fields'><div class='field'><input type='text' name='colors' value=''/></div><div class='field'> <select name='skills' class='ui fluid dropdown'><option value=''>AdaptiveStreaming</option></div></div>");
     }
 
     var source = document.getElementById("formTemplate").innerHTML;
