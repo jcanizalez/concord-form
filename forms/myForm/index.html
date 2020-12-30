@@ -16,10 +16,10 @@
 </head>
 <body>
 
-<h1 class="ui center aligned header">My Form</h1>
+<h1 class="ui center aligned header">Media Services</h1>
 
 <div class="ui text center aligned container">
-    Dynamic form example.
+   Media
 </div>
 
 <div class="ui text container">
@@ -41,49 +41,37 @@
                     </div>
                     {{/if}}
                      <div class="field {{#if errors.firstName}}error{{/if}}">
-                        <label>First name:</label>
+                        <label>Application name:</label>
                         <input name="firstName" value="{{values.firstName}}"/>
                     </div>
                     <div class="field">
-                        <label>Last name:</label>
-                        <input name="lastName" value="{{values.lastName}}"/>
-                    </div>
-                    <div class="field">
-                        <label>Age:</label>
-                        <input name="age" value="{{values.age}}" type="number"/>
-                    </div>
-                    <div class="field {{#if errors.aFile}}error{{/if}}">
-                        <label>File:</label>
-                        <input name="aFile" type="file"/>
-                    </div>
-                    <div class="field">
                         <label>Skills:</label>
-                        <select name="skills" multiple="multiple" class="ui fluid dropdown">
+                        <select name="skills" class="ui fluid dropdown">
                             <option value="">Skills</option>
                             <option value="angular">Angular</option>
                             <option value="css">CSS</option>
                             <option value="design">Graphic Design</option>
                         </select>
                     </div>
-                    <div class="field">
-                        <div class="ui checkbox">
-                            <input id="tosAgreeField" type="checkbox" name="tosAgree" {{#if values.tosAgree}}checked{{/if}} value="true">
-                            <label for="tosAgreeField">I agree to the Terms and Conditions</label>
-                        </div>
-                    </div>
+                    
+                     <div class="two fields">
+                         <div class="field">
+                            <label>Name</label>
+                         </div>
+                          <div class="field">
+                            <label>Description</label>
+                         </div>
+                       </div>
+                      {{#each values.colors}}
+                            <div class="two fields"><div class="field"><input type="text" name="colors" value="{{this}}"/></div><div class="field"><input type="text" name="colors" value="{{this}}"/></div></div>
+                      {{/each}}
+        
 
-                    <div class="field">
-                        <div id="list" class="ui list">
-                            {{#each values.colors}}
-                            <div class="item"><input type="text" name="colors" value="{{this}}"/></div>
-                            {{/each}}
-                        </div>
-
-                        <button class="ui labeled icon button" onclick="handleAdd(event)">
-                            <i class="add icon"></i>
-                            Add
-                        </button>
-                    </div>
+                     <button class="ui labeled icon button" onclick="handleAdd(event)">
+                        <i class="add icon"></i>
+                        Add Asset
+                     </button>
+              
 
                     <div class="ui divider"></div>
 
@@ -107,7 +95,7 @@
 
     function handleAdd(ev) {
         ev.preventDefault();
-        $("#list").append("<div class='item'><input type='text' name='colors' value='enter something'/>");
+        $("#list").append("<div class='two fields'><div class='field'><input type='text' name='colors' value=''/></div><div class='field'><input type='text' name='colors'/></div></div>");
     }
 
     var source = document.getElementById("formTemplate").innerHTML;
