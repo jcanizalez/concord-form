@@ -5,9 +5,23 @@ data = {
             "label" : "colors",
             "type" : "string",
             "cardinality" : "AT_LEAST_ONE"
+        },
+          "firstName" : {
+            "type" : "string",
+            "cardinality" : "ONE_AND_ONLY_ONE"
+        },
+        "lastName" : {
+            "type" : "string",
+            "cardinality" : "ONE_AND_ONLY_ONE"
+        },
+        "age" : {
+            "type" : "int",
+            "cardinality" : "ONE_AND_ONLY_ONE"
         }
     },
     "values" : {
-        "colors" : [ "red", "green", "blue" ]
+        "colors" : [ "red", "green", "blue" ],
+        "lastName" : "Smith",
+        "age": 21,
     }
 };
