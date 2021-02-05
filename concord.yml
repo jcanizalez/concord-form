@@ -6,7 +6,7 @@ flows:
 forms:
   myForm:
     - colors: {type: "string+"}
-    - firstName: { label: "First name", type: "string", value: "John" }
+    - firstName: { label: "First name", type: "string", value: "Example" }
     - lastName: { label: "Last name", type: "string" }
     - age: { label: "Age", type: "int", min: 21, max: 999 }
     - color: { label: "Favorite color", type: "string", allow: ["red", "green", "blue"] }
